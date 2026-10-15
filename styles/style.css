@@ -1,41 +1,122 @@
-html {
-  font-size: 10px;
-  font-family: 'Open Sans', sans-serif;
 }
 
-
-h1 {
-  font-size: 60px;
-  text-align: center;
+.pipeline-step small {
+    margin-top: 3px;
+    color: var(--muted);
+    font-size: 11px;
 }
 
-p, li {
-  font-size: 16px;
-  line-height: 2;
-  letter-spacing: 1px;
+.pipeline-arrow {
+    color: var(--orange);
+    font-size: 20px;
 }
 
-
-html {
-  background-color: #00539F;
+.closing-card {
+    max-width: 1052px;
+    margin: 10px auto 75px;
+    padding: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: linear-gradient(115deg, #19243a, #111827);
 }
 
-body {
-  width: 600px;
-  margin: 0 auto;
-  background-color: #FF9500;
-  padding: 0 20px 20px 20px;
-  border: 5px solid black;
+.closing-card > p {
+    max-width: 340px;
+    color: var(--muted);
+    font-size: 14px;
 }
 
-h1 {
-  margin: 0;
-  padding: 20px 0;
-  color: #00539F;
-  text-shadow: 3px 3px 1px black;
+footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 22px 8%;
+    border-top: 1px solid rgba(164, 175, 194, 0.15);
+    color: #8290a6;
+    font-size: 12px;
 }
 
-img {
-  display: block;
-  margin: 0 auto;
+.footer-brand {
+    color: var(--text);
+    font-weight: 800;
+}
+
+@media (max-width: 850px) {
+    .feature-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pipeline {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .pipeline-arrow {
+        display: none;
+    }
+
+    .closing-card {
+        margin-right: 24px;
+        margin-left: 24px;
+    }
+}
+
+@media (max-width: 560px) {
+    .site-header {
+        padding: 16px 20px;
+    }
+
+    .status {
+        font-size: 9px;
+        letter-spacing: 0.5px;
+    }
+
+    .hero {
+        padding: 75px 22px 60px;
+    }
+
+    .hero h1 {
+        letter-spacing: -1.5px;
+    }
+
+    .hero-copy {
+        font-size: 15px;
+    }
+
+    .section {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .closing-card {
+        margin: 10px 20px 50px;
+        padding: 25px;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    footer {
+        padding: 20px;
+        flex-direction: column;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
 }
